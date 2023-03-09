@@ -142,65 +142,14 @@ const services_Id = () => {
                 );
               })}
             </Row>
-            {/* <Row
-              gutter={{
-                xs: 8,
-                sm: 16,
-                md: 24,
-                lg: 50,
-              }}
-              style={{ justifyContent: "center" }}
-            >
-              <Col className="gutter-row" span={8}>
-                <Card
-                  style={{
-                    backgroundColor: colors.CTA,
-                    padding: "2rem",
-                    color: colors.Light,
-                    justifyContent: "center",
-                  }}
-                >
-                  <div style={{ fontSize: "2rem", fontWeight: "bold" }}>
-                    Languages
-                  </div>
-                  <div>
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                    diam nonumy eirmod tempor invidunt ut labore et dolore magna
-                    aliquyam erat, sed diam voluptua. At vero eos et accusam et
-                    justo duo dolores et ea rebum. Stet clita kasd gubergren, no
-                    sea takimata sanctus est Lorem ipsum dolor
-                  </div>
-                </Card>
-              </Col>
-              <Col className="gutter-row" span={8}>
-                <Card
-                  style={{
-                    backgroundColor: colors.CTA,
-                    padding: "2rem",
-                    color: colors.Light,
-                    justifyContent: "center",
-                  }}
-                >
-                  <div style={{ fontSize: "2rem", fontWeight: "bold" }}>
-                    Neural Networks
-                  </div>
-                  <div>
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                    diam nonumy eirmod tempor invidunt ut labore et dolore magna
-                    aliquyam erat, sed diam voluptua. At vero eos et accusam et
-                    justo duo dolores et ea rebum. Stet clita kasd gubergren, no
-                    sea takimata sanctus est Lorem ipsum dolor
-                  </div>
-                </Card>
-              </Col>
-            </Row> */}
+
             <Space
               direction="horizontal"
               size="large"
               style={{ marginTop: "7rem" }}
             >
               <Image
-                src="/../public/images/test.webp"
+                src="/images/test.webp"
                 alt="people working"
                 width={600}
                 height={400}
@@ -214,7 +163,7 @@ const services_Id = () => {
                 >
                   Why Hire YNotAi's {data.post}?
                 </Title>
-                <p  >{data.why_details}</p>
+                <p>{data.why_details}</p>
                 <Link
                   href={data.why_link}
                   className="cta"
