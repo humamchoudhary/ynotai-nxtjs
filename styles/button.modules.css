@@ -1,0 +1,21 @@
+.menu {
+  padding: 20px 40px;
+  font-size: 32px;
+  font-family: Arial, sans-serif;
+  display: inline-block;
+  position: relative;
+}
+.menu:before {
+  content: "";
+  background: #ffadad;
+  position: absolute;
+  width: 0%;
+  top: 0;
+  left: 0;
+  height: 100%;
+  transition: 0.3s linear;
+  z-index: -1;
+}
+.menu:hover:before {
+  width: 100%;
+}
