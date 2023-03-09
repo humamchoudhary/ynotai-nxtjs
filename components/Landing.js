@@ -17,7 +17,7 @@ export default function Landing(props) {
         <div>
           <Image
             style={{ objectFit: "cover", opacity: 0.6 }}
-            src="/images/AI.webp"
+            src="./images/AI.webp"
             width={w}
             height={h - 100}
             alt="AI"
@@ -27,7 +27,7 @@ export default function Landing(props) {
         <div>
           <Image
             style={{ objectFit: "cover", opacity: 0.6 }}
-            src="/images/Ai3.webp"
+            src="./images/Ai3.webp"
             width={w}
             height={h - 100}
             alt="AI"
@@ -37,7 +37,7 @@ export default function Landing(props) {
         <div>
           <Image
             style={{ objectFit: "cover", opacity: 0.6 }}
-            src="/images/Ai4.webp"
+            src="./images/Ai4.webp"
             width={w}
             height={h - 100}
             alt="AI"
@@ -47,7 +47,7 @@ export default function Landing(props) {
         <div>
           <Image
             style={{ objectFit: "cover", opacity: 0.6 }}
-            src="/images/Ai5.webp"
+            src="./images/Ai5.webp"
             alt="AI"
             width={w}
             height={h - 100}
