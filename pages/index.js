@@ -83,7 +83,7 @@ export default function App() {
           <Space
             direction="horizontal"
             size="large"
-            style={{ marginTop: "7rem" }}
+            style={{ marginTop: "2rem" }}
           >
             <div>
               <p
@@ -112,12 +112,13 @@ export default function App() {
               </p>
             </div>
             <Image
+              className="vision-img"
               src="/images/test.webp"
               alt="people working"
               width={600}
               height={400}
               style={{
-                borderRadius: "10px",
+                borderRadius: "5px",
               }}
             />
           </Space>

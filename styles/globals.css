@@ -9,7 +9,6 @@ body {
   src: local("Always Smile"), url("./Always Smile.otf") format("opentype");
 }
 p {
-  
   font-size: 1.5rem;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
@@ -17,8 +16,8 @@ p {
 }
 .cta {
   color: white;
-  border: 2px solid #90e0ef;
-  background-color: #90e0ef;
+  border: 2px solid #90e1ef69;
+  background-color: #90e1ef69;
   font-weight: 700;
   border-radius: 1rem;
   padding: 0.75rem 2rem;
