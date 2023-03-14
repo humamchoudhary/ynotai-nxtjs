@@ -149,7 +149,7 @@ const services_Id = () => {
               style={{ marginTop: "7rem" }}
             >
               <Image
-                src="/../public/images/test.webp"
+                src="/images/test.webp"
                 alt="people working"
                 width={600}
                 height={400}
