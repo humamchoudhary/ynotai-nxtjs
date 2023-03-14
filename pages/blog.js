@@ -1,7 +1,7 @@
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import Layout from "../components/Layout";
-import { Typography, Space, Card } from "antd";
+import { Typography,  Card } from "antd";
 
 export default function Blog() {
   const blogs = [
