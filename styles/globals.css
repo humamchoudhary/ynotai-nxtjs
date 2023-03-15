@@ -34,3 +34,37 @@ p {
 .test {
   width: fit-content;
 }
+
+.Card {
+  min-height: 400px;
+  background-color: #90e1ef;
+  border-radius: 10px;
+  padding: 10px 10px;
+  border: transparent solid 3px;
+  transition: all 150ms ease-in-out;
+}
+.Card ul {
+  list-style: none;
+}
+.Card:hover {
+  background-color: #90e1ef2f;
+  border: #90e1ef solid 3px;
+}
+.Card ul li p {
+  color: white;
+}
+.client-box {
+  height: 356px;
+  width: 1088px;
+}
+.user_prof {
+  height: 218px;
+  width: 218px;
+}
+.msg {
+  font-family: "Always Smile", cursive;
+  font-size: 2.5rem;
+}
+.highlight {
+  font-family: "Satisfy", cursive;
+}

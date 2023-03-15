@@ -33,6 +33,7 @@ export default function App() {
     "Service 7",
     "Service 8",
   ];
+  const testimonials = ["Testimonials 1"];
 
   const serviceCards = services.map((service) => {
     return (
@@ -52,14 +53,14 @@ export default function App() {
           <div
             style={{
               backgroundColor: colors.Dark,
-              width: "200px",
               borderRadius: "5px",
-              height: "300px",
+              width: "234px",
+              height: "350px",
             }}
           >
             <Image
-              width={200}
-              height={300}
+              width={234}
+              height={350}
               draggable={true}
               style={{
                 borderRadius: "5px",
@@ -72,30 +73,89 @@ export default function App() {
       </div>
     );
   });
+  const testimonialCards = testimonials.map((testimonial) => {
+    return (
+      <div
+        className="client-box"
+        style={{
+          backgroundColor: colors.CTA,
+          borderRadius: "1rem",
+          display: "flex",
+          flexDirection: "row",
+          alignItems: "center",
+          justifyContent: "center",
+          gap: "5rem",
+          padding: "0 5rem",
+          marginRight: "auto",
+          marginLeft: "auto",
+        }}
+      >
+        <div
+          className="user"
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            gap: "2rem",
+          }}
+        >
+          <div
+            className="user_prof"
+            style={{
+              overflow: "hidden",
+              backgroundColor: colors.Dark,
+              borderRadius: "100%",
+              backgroundImage: `url(
+                "https://randomuser.me/api/portraits/women/94.jpg"
+              )`,
+              backgroundSize: "cover",
+            }}
+          ></div>
+          <h1
+            className="highlight"
+            style={{ fontSize: "1.875rem", lineHeight: "2.25rem" }}
+          >
+            Random Name
+          </h1>
+        </div>
+        <p className="msg">
+          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+          nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+          sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
+          rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
+          ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
+        </p>
+      </div>
+    );
+  });
   const { Title } = Typography;
   const [loaded, setLoaded] = useState(false);
+  const [loaded2, setLoaded2] = useState(false);
 
   useEffect(() => {
     setLoaded(true);
+    setLoaded2(true);
   }, []);
   return (
     <Layout main="Get your work done" span="Professionally">
       <div
         style={{
-          paddingLeft: "278px",
-          paddingRight: "278px",
           display: "flex",
           flexDirection: "column",
           gap: "10px",
           justifyContent: "center",
           marginBottom: "6rem",
+          overflow: "hidden",
         }}
       >
         <div
           style={{
             display: "flex",
             flexDirection: "row",
-            padding: "15px 0px",
+            paddingLeft: "278px",
+            paddingRight: "278px",
+            paddingTop: "15px",
+            paddingBottom: "15px",
             justifyContent: "space-evenly",
           }}
         >
@@ -139,6 +199,9 @@ export default function App() {
             flexDirection: "column",
             justifyContent: "center",
             alignItems: "center",
+            marginTop: "2rem",
+            paddingLeft: "278px",
+            paddingRight: "278px",
           }}
         >
           <Title
@@ -202,6 +265,8 @@ export default function App() {
             justifyContent: "center",
             alignItems: "center",
             marginTop: "2rem",
+            paddingLeft: "278px",
+            paddingRight: "278px",
           }}
         >
           <Title
@@ -210,6 +275,7 @@ export default function App() {
               fontSize: "4rem",
               fontWeight: "900",
               textAlign: "center",
+              marginBottom: "5rem",
             }}
           >
             Our Services
@@ -221,6 +287,195 @@ export default function App() {
               responsive={responsive}
               autoPlay
               autoPlayInterval={1000}
+              animationDuration={1000}
+              disableButtonsControls
+              infinite
+              touchTracking={true}
+            />
+          )}
+        </div>
+
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "center",
+            marginTop: "2rem",
+            paddingLeft: "278px",
+            height: "90vh",
+            paddingRight: "278px",
+            backgroundColor: colors.Dark,
+          }}
+        >
+          <Title
+            style={{
+              color: colors.Light,
+              fontSize: "4rem",
+              fontWeight: "900",
+              textAlign: "center",
+              marginBottom: "5rem",
+            }}
+          >
+            Why YNotAI
+          </Title>
+
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              gap: "20px",
+            }}
+          >
+            <div className="Card">
+              <Title
+                style={{
+                  color: colors.Light,
+                  fontSize: "2.2rem",
+                  textAlign: "center",
+                  fontWeight: "800",
+                }}
+              >
+                Title 1
+              </Title>
+              <ul>
+                <li>
+                  <p>
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                    diam nonumy eirmod tempor invidunt ut labore et dolore magna
+                    aliquyam erat, sed diam voluptua.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                    diam nonumy eirmod tempor invidunt ut labore et dolore magna
+                    aliquyam erat, sed diam voluptua.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                    diam nonumy eirmod tempor invidunt ut labore et dolore magna
+                    aliquyam erat, sed diam voluptua.
+                  </p>
+                </li>
+              </ul>
+            </div>
+            <div className="Card">
+              <Title
+                style={{
+                  color: colors.Light,
+                  fontSize: "2.2rem",
+                  textAlign: "center",
+                  fontWeight: "800",
+                }}
+              >
+                Title 1
+              </Title>
+              <ul>
+                <li>
+                  <p>
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                    diam nonumy eirmod tempor invidunt ut labore et dolore magna
+                    aliquyam erat, sed diam voluptua.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                    diam nonumy eirmod tempor invidunt ut labore et dolore magna
+                    aliquyam erat, sed diam voluptua.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                    diam nonumy eirmod tempor invidunt ut labore et dolore magna
+                    aliquyam erat, sed diam voluptua.
+                  </p>
+                </li>
+              </ul>
+            </div>
+            <div className="Card">
+              <Title
+                style={{
+                  color: colors.Light,
+                  fontSize: "2.2rem",
+                  textAlign: "center",
+                  fontWeight: "800",
+                }}
+              >
+                Title 1
+              </Title>
+              <ul>
+                <li>
+                  <p>
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                    diam nonumy eirmod tempor invidunt ut labore et dolore magna
+                    aliquyam erat, sed diam voluptua.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                    diam nonumy eirmod tempor invidunt ut labore et dolore magna
+                    aliquyam erat, sed diam voluptua.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                    diam nonumy eirmod tempor invidunt ut labore et dolore magna
+                    aliquyam erat, sed diam voluptua.
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "center",
+            marginTop: "2rem",
+            paddingLeft: "278px",
+            paddingRight: "278px",
+          }}
+        >
+          <Title
+            style={{
+              color: colors.Dark,
+              fontSize: "4rem",
+              fontWeight: "900",
+              textAlign: "center",
+              marginTop: "5rem",
+              marginBottom: "5rem",
+            }}
+          >
+            Testimonials
+          </Title>
+
+          {loaded2 && (
+            <AliceCarousel
+              mouseTracking
+              items={testimonialCards}
+              responsive={{
+                0: {
+                  items: 1,
+                },
+                600: {
+                  items: 1,
+                },
+                1024: {
+                  items: 1,
+                },
+              }}
+              autoPlay
+              autoPlayInterval={3000}
               animationDuration={1000}
               disableButtonsControls
               infinite
