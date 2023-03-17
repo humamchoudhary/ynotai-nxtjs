@@ -1,22 +1,29 @@
 import { Typography, Carousel, Button } from "antd";
 import Image from "next/image";
-import Link from "next/link";
 import { useState, useEffect } from "react";
 import useViewportSizes from "use-viewport-sizes";
 
 export default function Landing(props) {
   const [w, h, vpRefreshCb] = useViewportSizes();
+
   useEffect(() => {
     vpRefreshCb();
   }, []);
+  console.log(w);
+  console.log(h);
   const { Title } = Typography;
 
   return (
-    <>
-      <Carousel effect="fade" autoplay style={{ background: "black" }}>
+    <div>
+      <Carousel
+        effect="fade"
+        autoplay
+        style={{ background: "black" }}
+        className="h-5/6"
+      >
         <div>
           <Image
-            style={{ objectFit: "cover", opacity: 0.6 }}
+            style={{ objectFit: "cover", opacity: 0.6, height: "88vh" }}
             src="/images/AI.webp"
             width={w}
             height={h - 100}
@@ -26,8 +33,9 @@ export default function Landing(props) {
         </div>
         <div>
           <Image
-            style={{ objectFit: "cover", opacity: 0.6 }}
+            style={{ objectFit: "cover", opacity: 0.6, height: "88vh" }}
             src="/images/Ai3.webp"
+            className="h-5/6"
             width={w}
             height={h - 100}
             alt="AI"
@@ -36,8 +44,9 @@ export default function Landing(props) {
         </div>
         <div>
           <Image
-            style={{ objectFit: "cover", opacity: 0.6 }}
+            style={{ objectFit: "cover", opacity: 0.6, height: "88vh" }}
             src="/images/Ai4.webp"
+            className="h-5/6"
             width={w}
             height={h - 100}
             alt="AI"
@@ -46,8 +55,9 @@ export default function Landing(props) {
         </div>
         <div>
           <Image
-            style={{ objectFit: "cover", opacity: 0.6 }}
+            style={{ objectFit: "cover", opacity: 0.6, height: "88vh" }}
             src="/images/Ai5.webp"
+            className="h-5/6"
             alt="AI"
             width={w}
             height={h - 100}
@@ -58,25 +68,19 @@ export default function Landing(props) {
 
       <div
         style={{
-          display: "flex",
-          flexDirection: "column",
-          width: "100%",
-          position: "absolute",
-          top: "20rem",
-          left: "278px",
+          top: "50vh",
         }}
+        className="-translate-y-1/2 flex flex-col w-full left-0 absolute lg:left-[278px]"
       >
         <Title
-          style={{ fontSize: "5rem", color: "white", width: "600px" }}
-          className="font2"
+          style={{ color: "white" }}
+          className="font2 text-5xl lg:text-7xl"
         >
           {props.main} <br></br> <span>{props.span}</span>
         </Title>
-        <p style={{ fontSize: "1.3rem", color: "white", width: "600px" }}>
-          {props.sub}
-        </p>
+        <p style={{ fontSize: "1.3rem", color: "white" }}>{props.sub}</p>
       </div>
-    </>
+    </div>
   );
 }
 

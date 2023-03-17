@@ -1,4 +1,3 @@
-import { Space } from "antd";
 import { useRouter } from "next/router";
 import { Typography, Col, Row, Card } from "antd";
 import { colors } from "../../public/utilities";
@@ -42,17 +41,7 @@ const services_Id = () => {
     <>
       {data && (
         <Layout main={`${data.post} For Hire`} sub={data.subline}>
-          <Space
-            style={{
-              padding: "3rem 278px",
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "center",
-              backgroundColor: colors.Light,
-              marginBottom: "4rem",
-            }}
-            size="large"
-          >
+          <div className="flex flex-col justify-center bg-Light mb-16 py-12 px-6 lg:px-[278px]">
             <Title
               style={{
                 fontSize: "3rem",
@@ -63,18 +52,13 @@ const services_Id = () => {
             >
               Why hire a {data.post}
             </Title>
-            <Row
-              gutter={{
-                xs: 8,
-                sm: 16,
-                md: 24,
-                lg: 32,
-              }}
+            <div
               style={{ justifyContent: "center" }}
+              className="flex flex-col gap-8 lg:flex-row"
             >
               {data.reasons.map((reason, index) => {
                 return (
-                  <Col className="gutter-row" span={6}>
+                  <div className="" span={6}>
                     <Card
                       style={{
                         backgroundColor: colors.CTA,
@@ -88,10 +72,10 @@ const services_Id = () => {
                       </div>
                       <div>{reason}</div>
                     </Card>
-                  </Col>
+                  </div>
                 );
               })}
-            </Row>
+            </div>
             <div
               style={{
                 display: "flex",
@@ -118,13 +102,13 @@ const services_Id = () => {
                 {data.tag_line}
               </p>
             </div>
-            <Row
-              gutter={[64, 64]}
+            <div
+              className="grid grid-cols-1 lg:grid-cols-2 gap-4"
               style={{ justifyContent: "center", marginBottom: "2rem" }}
             >
               {data.experties.map((exp) => {
                 return (
-                  <Col className="gutter-row" span={12}>
+                  <div className="">
                     <Card
                       style={{
                         backgroundColor: colors.CTA,
@@ -138,12 +122,12 @@ const services_Id = () => {
                       </div>
                       <div style={{ fontSize: "1.5rem" }}>{exp.details}</div>
                     </Card>
-                  </Col>
+                  </div>
                 );
               })}
-            </Row>
+            </div>
 
-            <Space
+            <div
               direction="horizontal"
               size="large"
               style={{ marginTop: "7rem" }}
@@ -154,7 +138,7 @@ const services_Id = () => {
                 width={600}
                 height={400}
               />
-              <Space direction="vertical" style={{ marginLeft: "2rem" }}>
+              <div direction="vertical" style={{ marginLeft: "2rem" }}>
                 <Title
                   style={{
                     fontSize: "3rem",
@@ -171,9 +155,9 @@ const services_Id = () => {
                 >
                   Hire Us
                 </Link>
-              </Space>
-            </Space>
-          </Space>
+              </div>
+            </div>
+          </div>
         </Layout>
       )}
     </>

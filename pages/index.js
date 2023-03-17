@@ -1,6 +1,6 @@
 import Layout from "../components/Layout";
 import Image from "next/image";
-import { Typography, Space } from "antd";
+import { Typography } from "antd";
 import { colors } from "../public/utilities";
 import { useEffect, useState } from "react";
 import dynamic from "next/dynamic";
@@ -8,9 +8,10 @@ const AliceCarousel = dynamic(() => import("react-alice-carousel"), {
   ssr: false,
 });
 import "react-alice-carousel/lib/alice-carousel.css";
+
 const responsive = {
   0: {
-    items: 1,
+    items: 2,
   },
   600: {
     items: 3,
@@ -33,11 +34,16 @@ export default function App() {
     "Service 7",
     "Service 8",
   ];
-  const testimonials = ["Testimonials 1"];
+  const testimonials = [
+    "Testimonials 1",
+    "Testimonials 1",
+    "Testimonials 1",
+    "Testimonials 1",
+  ];
 
   const serviceCards = services.map((service) => {
     return (
-      <div key={service}>
+      <div key={service} className="mx-1">
         <div style={{ position: "relative" }}>
           <p
             style={{
@@ -54,9 +60,8 @@ export default function App() {
             style={{
               backgroundColor: colors.Dark,
               borderRadius: "5px",
-              width: "234px",
-              height: "350px",
             }}
+            className="w-52 md:w-64"
           >
             <Image
               width={234}
@@ -66,6 +71,7 @@ export default function App() {
                 borderRadius: "5px",
                 opacity: 0.5,
               }}
+              className="w-52 md:w-64"
               src="/images/service1.jpg"
             />
           </div>
@@ -76,18 +82,9 @@ export default function App() {
   const testimonialCards = testimonials.map((testimonial) => {
     return (
       <div
-        className="client-box"
+        className="bg-CTA flex flex-col-reverse items-center justify-center gap-20 mx-1 p-5 lg:mx-5 lg:p-20 lg:flex-row"
         style={{
-          backgroundColor: colors.CTA,
           borderRadius: "1rem",
-          display: "flex",
-          flexDirection: "row",
-          alignItems: "center",
-          justifyContent: "center",
-          gap: "5rem",
-          padding: "0 5rem",
-          marginRight: "auto",
-          marginLeft: "auto",
         }}
       >
         <div
@@ -118,7 +115,7 @@ export default function App() {
             Random Name
           </h1>
         </div>
-        <p className="msg">
+        <p className="msg text-4xl">
           Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
           nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
           sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
@@ -140,9 +137,6 @@ export default function App() {
     <Layout main="Get your work done" span="Professionally">
       <div
         style={{
-          display: "flex",
-          flexDirection: "column",
-          gap: "10px",
           justifyContent: "center",
           marginBottom: "6rem",
           overflow: "hidden",
@@ -193,17 +187,7 @@ export default function App() {
           />
         </div>
 
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            alignItems: "center",
-            marginTop: "2rem",
-            paddingLeft: "278px",
-            paddingRight: "278px",
-          }}
-        >
+        <div className="flex flex-col justify-center items-center px-6 mt-8 lg:px-[278px]">
           <Title
             style={{
               color: colors.Dark,
@@ -214,12 +198,11 @@ export default function App() {
           >
             Our Vision
           </Title>
-          <Space
-            direction="horizontal"
-            size="large"
+          <div
+            className="flex flex-col md:flex-row gap-16 items-center mb-11"
             style={{ marginTop: "2rem" }}
           >
-            <div>
+            <div className="flex-1">
               <p
                 style={{
                   color: colors.CTA,
@@ -246,7 +229,7 @@ export default function App() {
               </p>
             </div>
             <Image
-              className="vision-img"
+              className="h-full w-full flex-1"
               src="/images/test.webp"
               alt="people working"
               width={600}
@@ -255,20 +238,10 @@ export default function App() {
                 borderRadius: "5px",
               }}
             />
-          </Space>
+          </div>
         </div>
 
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            alignItems: "center",
-            marginTop: "2rem",
-            paddingLeft: "278px",
-            paddingRight: "278px",
-          }}
-        >
+        <div className="flex flex-col justify-center items-center px-6 mt-8 lg:px-[278px]">
           <Title
             style={{
               color: colors.Dark,
@@ -295,19 +268,7 @@ export default function App() {
           )}
         </div>
 
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            alignItems: "center",
-            marginTop: "2rem",
-            paddingLeft: "278px",
-            height: "90vh",
-            paddingRight: "278px",
-            backgroundColor: colors.Dark,
-          }}
-        >
+        <div className="flex flex-col justify-center items-center px-6 mt-8 py-24 bg-Dark min-h-screen lg:px-[278px]">
           <Title
             style={{
               color: colors.Light,
@@ -320,13 +281,7 @@ export default function App() {
             Why YNotAI
           </Title>
 
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "row",
-              gap: "20px",
-            }}
-          >
+          <div className="flex flex-col gap-5 lg:flex-row">
             <div className="Card">
               <Title
                 style={{
@@ -435,17 +390,7 @@ export default function App() {
           </div>
         </div>
 
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            alignItems: "center",
-            marginTop: "2rem",
-            paddingLeft: "278px",
-            paddingRight: "278px",
-          }}
-        >
+        <div className="flex flex-col justify-center items-center px-6 mt-8 lg:px-[278px]">
           <Title
             style={{
               color: colors.Dark,
@@ -466,6 +411,7 @@ export default function App() {
               responsive={{
                 0: {
                   items: 1,
+                  itemsFit: "contain",
                 },
                 600: {
                   items: 1,
@@ -479,6 +425,7 @@ export default function App() {
               animationDuration={1000}
               disableButtonsControls
               infinite
+              disableDotsControls
               touchTracking={true}
             />
           )}

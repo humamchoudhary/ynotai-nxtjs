@@ -7,25 +7,8 @@ const Footer = () => {
   const { Title } = Typography;
 
   return (
-    <Layout
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "space-between",
-        padding: " 20px 278px",
-        backgroundColor: colors.Dark,
-        color: colors.Light,
-      }}
-    >
-      <Layout
-        style={{
-          display: "flex",
-          flexDirection: "row",
-          justifyContent: "space-between",
-          backgroundColor: colors.Dark,
-          color: colors.Light,
-        }}
-      >
+    <Layout className="flex flex-col justify-between  py-5 px-6 lg:px-[278px] bg-Dark text-Light">
+      <Layout className="flex flex-col lg:flex-row justify-between bg-Dark text-Light">
         <Link
           href="#"
           style={{
@@ -38,28 +21,23 @@ const Footer = () => {
         </Link>
         <Layout
           style={{
-            display: "flex",
-            flexDirection: "row",
-            width: "min-content",
-            justifyContent: "flex-end",
-            gap: "12rem",
             backgroundColor: "transparent",
             color: colors.Light,
-            fontSize: "1rem",
           }}
+          className="flex flex-col lg:flex-row justify-end gap-3 lg:gap-48"
         >
-          <div>
+          <div className="flex flex-col gap-3 text-sm lg:text-lg">
             <p>Home</p>
             <p>Services</p>
             <p>Clients</p>
             <p>Contact</p>
           </div>
-          <div>
+          <div className="flex flex-col gap-3 text-sm lg:text-lg">
             <p>Fiverr</p>
             <p>Upwork</p>
             <p>PeoplePerHour</p>
           </div>
-          <div>
+          <div className="flex flex-col gap-3 lg:text-lg text-xs">
             <p>Facebook</p>
             <p>LinkedIn</p>
           </div>
@@ -73,6 +51,7 @@ const Footer = () => {
           justifyContent: "center",
           alignItems: "center",
           marginTop: "3rem",
+          gap: "1rem",
         }}
       >
         <p style={{ fontSize: "13px" }}>
@@ -82,11 +61,9 @@ const Footer = () => {
         </p>
         <Layout
           style={{
-            display: "flex",
-            flexDirection: "row",
-            gap: "3rem",
             backgroundColor: colors.Dark,
           }}
+          className="flex flex-row gap-2 lg:gap-12 "
         >
           <Link href={"/"}>Legal</Link>
           <Link href={"/"}>Terms of Service</Link>
