@@ -72,12 +72,12 @@ export default function Landing(props) {
         }}
         className="-translate-y-1/2 flex flex-col w-full left-0 absolute lg:left-[278px]"
       >
-        <Title
+        <h1
           style={{ color: "white" }}
-          className="font2 text-5xl lg:text-7xl"
+          className="font2 text-5xl font-medium lg:font-bold lg:text-8xl"
         >
           {props.main} <br></br> <span>{props.span}</span>
-        </Title>
+        </h1>
         <p style={{ fontSize: "1.3rem", color: "white" }}>{props.sub}</p>
       </div>
     </div>
