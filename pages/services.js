@@ -1,7 +1,8 @@
 import { Menu } from "antd";
 import { colors } from "../public/utilities";
 import { services } from "../public/temp_data";
-import Header from "../components/Header";
+import dynamic from "next/dynamic";
+const Header = dynamic(() => import("../components/Header"));
 
 export default function Service() {
   return (

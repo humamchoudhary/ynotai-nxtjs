@@ -1,11 +1,12 @@
 import { useRouter } from "next/router";
-import { Typography, Col, Row, Card } from "antd";
+import { Typography, Card } from "antd";
 import { colors } from "../../public/utilities";
 import Layout from "../../components/Layout";
 import Image from "next/image";
 import Link from "next/link";
 import { services } from "../../public/temp_data";
 import { useEffect, useState } from "react";
+
 const services_Id = () => {
   const { Title } = Typography;
 

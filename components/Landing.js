@@ -1,4 +1,4 @@
-import { Typography, Carousel, Button } from "antd";
+import { Carousel } from "antd";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import useViewportSizes from "use-viewport-sizes";
@@ -11,7 +11,6 @@ export default function Landing(props) {
   }, []);
   console.log(w);
   console.log(h);
-  const { Title } = Typography;
 
   return (
     <div>

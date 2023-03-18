@@ -1,6 +1,7 @@
-import Footer from "./Footer";
-import Header from "./Header";
-import Landing from "./Landing";
+import dynamic from "next/dynamic";
+const Header = dynamic(() => import("./Header"));
+const Landing = dynamic(() => import("./Landing"));
+const Footer = dynamic(() => import("./Footer"));
 
 export default function Layout({ children, main, span, sub }) {
   console.log(children);

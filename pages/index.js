@@ -20,9 +20,7 @@ const responsive = {
     items: 5,
   },
 };
-const myLoader = () => {
-  return "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/2560px-Google_2015_logo.svg.png";
-};
+
 export default function App() {
   const services = [
     "Service 1",
@@ -157,33 +155,29 @@ export default function App() {
             alt="google"
             width={250}
             height={80}
-            src="logo.png"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/2560px-Google_2015_logo.svg.png"
             style={{ opacity: "60%" }}
-            loader={myLoader}
           />
           <Image
             alt="google"
             width={250}
             height={80}
-            src="logo.png"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/2560px-Google_2015_logo.svg.png"
             style={{ opacity: "60%" }}
-            loader={myLoader}
           />
           <Image
             alt="google"
             width={250}
             height={80}
-            src="logo.png"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/2560px-Google_2015_logo.svg.png"
             style={{ opacity: "60%" }}
-            loader={myLoader}
           />
           <Image
             alt="google"
             width={250}
             height={80}
-            src="logo.png"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/2560px-Google_2015_logo.svg.png"
             style={{ opacity: "60%" }}
-            loader={myLoader}
           />
         </div>
 
