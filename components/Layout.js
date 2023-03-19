@@ -4,7 +4,6 @@ const Landing = dynamic(() => import("./Landing"));
 const Footer = dynamic(() => import("./Footer"));
 
 export default function Layout({ children, main, span, sub }) {
-  console.log(children);
   return (
     <>
       <Header />

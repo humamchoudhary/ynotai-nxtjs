@@ -4,6 +4,8 @@ import { Typography } from "antd";
 import { colors } from "../public/utilities";
 import { useEffect, useState } from "react";
 import dynamic from "next/dynamic";
+// const vision = dynamic(() => import("../components/vision"));
+
 const AliceCarousel = dynamic(() => import("react-alice-carousel"), {
   ssr: false,
 });
@@ -180,6 +182,7 @@ export default function App() {
             style={{ opacity: "60%" }}
           />
         </div>
+
 
         <div className="flex flex-col justify-center items-center px-6 mt-8 lg:px-[278px]">
           <Title

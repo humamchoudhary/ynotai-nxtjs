@@ -37,7 +37,6 @@ const services_Id = () => {
     fetchData();
   }, [pid]);
 
-  console.log(data);
   return (
     <>
       {data && (
@@ -128,18 +127,15 @@ const services_Id = () => {
               })}
             </div>
 
-            <div
-              direction="horizontal"
-              size="large"
-              style={{ marginTop: "7rem" }}
-            >
+            <div className="mt-28 flex flex-row gap-7" id="test">
               <Image
                 src="/images/test.webp"
                 alt="people working"
                 width={600}
                 height={400}
+                className="rounded-lg"
               />
-              <div direction="vertical" style={{ marginLeft: "2rem" }}>
+              <div className="flex flex-col gap-4 ">
                 <Title
                   style={{
                     fontSize: "3rem",
@@ -149,13 +145,15 @@ const services_Id = () => {
                   Why Hire YNotAi's {data.post}?
                 </Title>
                 <p>{data.why_details}</p>
-                <Link
-                  href={data.why_link}
-                  className="cta"
-                  style={{ fontSize: "1.4rem" }}
-                >
-                  Hire Us
-                </Link>
+                <div>
+                  <Link
+                    href={data.why_link}
+                    className="cta"
+                    style={{ fontSize: "1.4rem" }}
+                  >
+                    Hire Us
+                  </Link>
+                </div>
               </div>
             </div>
           </div>

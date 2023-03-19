@@ -9,8 +9,6 @@ export default function Landing(props) {
   useEffect(() => {
     vpRefreshCb();
   }, []);
-  console.log(w);
-  console.log(h);
 
   return (
     <div>
@@ -69,10 +67,10 @@ export default function Landing(props) {
         style={{
           top: "50vh",
         }}
-        className="-translate-y-1/2 flex flex-col w-full left-0 absolute lg:left-[278px]"
+        className="-translate-y-1/2 flex flex-col gap-4 w-full left-0 absolute lg:left-[278px]"
       >
         <h1
-          style={{ color: "white" }}
+          style={{ color: "white", maxWidth: "800px" }}
           className="font2 text-5xl font-medium lg:font-bold lg:text-8xl"
         >
           {props.main} <br></br> <span>{props.span}</span>

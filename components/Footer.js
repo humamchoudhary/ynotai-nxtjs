@@ -1,4 +1,3 @@
-import React from "react";
 import { colors } from "../public/utilities";
 import Link from "next/link";
 import { Layout, Typography } from "antd";
