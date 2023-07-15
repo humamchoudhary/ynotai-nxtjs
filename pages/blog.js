@@ -1,61 +1,78 @@
-import Carousel from "react-multi-carousel";
-import "react-multi-carousel/lib/styles.css";
+const AliceCarousel = dynamic(() => import("react-alice-carousel"), {
+  ssr: false,
+});
+import dynamic from "next/dynamic";
+import "react-alice-carousel/lib/alice-carousel.css";
 import Layout from "../components/Layout";
-import { Typography,  Card } from "antd";
+import { Typography, Card } from "antd";
+import { colors } from "../public/utilities";
+import Image from "next/image";
 
 export default function Blog() {
   const blogs = [
-    "Blog 1",
-    "Blog 2",
-    "Blog 3",
-    "Blog 4",
-    "Blog 5",
-    "Blog 6",
-    "Blog 7",
-    "Blog 8",
+    {
+      name: "Blog 1",
+      author: "Muhammad Humam",
+      img: "https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png",
+    },
+    {
+      name: "Blog 2",
+      author: "Muhammad Humam",
+      img: "https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png",
+    },
+    {
+      name: "Blog 3",
+      author: "Muhammad Humam",
+      img: "https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png",
+    },
+    {
+      name: "Blog 4",
+      author: "Muhammad Humam",
+      img: "https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png",
+    },
+    {
+      name: "Blog 5",
+      author: "Muhammad Humam",
+      img: "https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png",
+    },
+    {
+      name: "Blog 6",
+      author: "Muhammad Humam",
+      img: "https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png",
+    },
   ];
 
   // Slider settings
   const responsive = {
-    desktop: {
-      breakpoint: { max: 3000, min: 1200 },
-      items: 4,
-      slidesToSlide: 3, // optional, default to 1.
-    },
-    tablet: {
-      breakpoint: { max: 1200, min: 950 },
-      items: 3,
-      slidesToSlide: 2, // optional, default to 1.
-    },
-    tablet2: {
-      breakpoint: { max: 950, min: 700 },
+    0: {
       items: 2,
-      slidesToSlide: 1, // optional, default to 1.
     },
-    mobile: {
-      breakpoint: { max: 700, min: 0 },
-      items: 1,
-      slidesToSlide: 1, // optional, default to 1.
+    600: {
+      items: 3,
+    },
+    1024: {
+      items: 4,
     },
   };
 
   // blog card
-  const { Meta } = Card;
   const blogCards = blogs.map((blog) => {
     return (
-      <div key={blog}>
-        <Card
-          hoverable
-          style={{ width: 240 }}
-          cover={
-            <img
-              alt="example"
-              src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png"
-            />
-          }
-        >
-          <Meta title={blog} description="Blog Description goes here" />
-        </Card>
+      <div
+        key={blog.name}
+        className="flex flex-col gap-3 hover:opacity-70 transition-all duration-300"
+      >
+        <Image
+          className="rounded-xl bg-CTA"
+          width={240}
+          height={336}
+          alt="example"
+          src={blog.img}
+        />
+        <div>
+          <p className="font-bold text-2xl m-0">{blog.name}</p>
+          <p className="font-light text-lg m-0">{blog.author}</p>
+        </div>
       </div>
     );
   });
@@ -63,8 +80,42 @@ export default function Blog() {
   const { Title } = Typography;
   return (
     <Layout main="The Ultimate Blogs for" span="Artificial Intelligence">
-      <div>
-        <Carousel responsive={responsive}>{blogCards}</Carousel>
+      <div className="px-[278px] mt-32">
+        <Title
+          style={{
+            color: colors.Dark,
+            fontSize: "4rem",
+            fontWeight: "900",
+            textAlign: "center",
+            marginBottom: "5rem",
+          }}
+        >
+          Trending Blogs
+        </Title>
+        <AliceCarousel
+          autoPlay
+          autoPlayInterval={3000}
+          animationDuration={1000}
+          disableButtonsControls
+          infinite
+          touchTracking={true}
+          responsive={responsive}
+        >
+          {blogCards}
+        </AliceCarousel>
+      </div>
+      <div className="mt-20">
+        <Title
+          style={{
+            color: colors.Dark,
+            fontSize: "4rem",
+            fontWeight: "900",
+            textAlign: "center",
+            marginBottom: "5rem",
+          }}
+        >
+          Blog Categories
+        </Title>
       </div>
     </Layout>
   );

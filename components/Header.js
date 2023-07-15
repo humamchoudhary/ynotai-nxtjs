@@ -62,7 +62,12 @@ export default function Header() {
             }
             placement="bottom"
           >
-            <div style={{ color: "white", fontWeight: "700" }}>Services</div>
+            <div
+              style={{ color: "white", fontWeight: "700" }}
+              className="hover:cursor-pointer"
+            >
+              Services
+            </div>
           </Dropdown>
         ) : (
           <Link href="/services" style={{ color: "white", fontWeight: "700" }}>
